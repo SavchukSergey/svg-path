@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "tslint",
+            "type": "shell",
+            "command": "npm run tslint",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": [
+                "$tslint5"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "watch",
+            "isBackground": true,
+            "options": {
+                "cwd": "${workspaceRoot}/src"
+            },
+            "command": "npm run watch",
+            "problemMatcher": [
+                "$tsc"
+            ]
+        }
+    ]
+}
