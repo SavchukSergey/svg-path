@@ -1,8 +1,11 @@
 const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
     entry: {
         "app": ['./src/app.ts'],
+        "path": ['./src/path.ts'],
     },
     devtool: "source-map",
     watch: true,
@@ -15,6 +18,13 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new CleanWebpackPlugin(["dist/*"]),
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+            chunks: ["app"]
+        })
+    ],
     resolve: {
         extensions: [".js", ".ts"]
     },

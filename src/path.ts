@@ -11,10 +11,13 @@ import MoveToAbsoluteCommand from "./commands/moveTo/moveToAbs";
 import MoveToRelativeCommand from "./commands/moveTo/moveToRel";
 import QuadraticCurveRelativeCommand from "./commands/quadratic/quadraticCurveRel";
 import QuadraticSmoothCurveRelativeCommand from "./commands/quadratic/quadraticSmoothCurveRel";
+import SvgPathParseContext from "./context";
 import EvaluationContext from "./eval";
 import Matrix from "./matrix";
-import SvgPathParseContext from "./parse-context";
 import Vector from "./vector";
+
+export { default as Matrix } from "./matrix";
+export { default as Vector } from "./vector";
 
 export default class SvgPath {
 

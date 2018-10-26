@@ -1,6 +1,6 @@
+import SvgPathParseContext from "../../context";
 import EvaluationContext from "../../eval";
 import Matrix from "../../matrix";
-import SvgPathParseContext from "../../parse-context";
 import Vector from "../../vector";
 import SvgPathCommand from "../command";
 

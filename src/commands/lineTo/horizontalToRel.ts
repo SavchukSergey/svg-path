@@ -1,6 +1,6 @@
+import SvgPathParseContext from "../../context";
 import EvaluationContext from "../../eval";
 import Matrix from "../../matrix";
-import SvgPathParseContext from "../../parse-context";
 import SvgPathCommand from "../command";
 import LineToRelativeCommand from "./lineToRel";
 
@@ -16,7 +16,7 @@ export default class HorizontalToRelativeCommand extends SvgPathCommand {
             const oldEnd = oldStart.addX(point);
             const newStart = matrix.transform(oldStart);
             const newEnd = matrix.transform(oldEnd);
-            const delta =  newEnd.sub(newStart);
+            const delta = newEnd.sub(newStart);
             res.dPoints.push(delta);
             context.position = oldEnd;
         }

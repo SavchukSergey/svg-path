@@ -1,6 +1,6 @@
+import SvgPathParseContext from "../../context";
 import EvaluationContext from "../../eval";
 import Matrix from "../../matrix";
-import SvgPathParseContext from "../../parse-context";
 import Vector from "../../vector";
 import SvgPathCommand from "../command";
 
@@ -19,7 +19,8 @@ export default class QuadraticSmoothCurveRelativeCommand extends SvgPathCommand 
             res.points.push(deltaEnd);
             context.position = oldEnd;
         }
-        return res;    }
+        return res;
+    }
 
     public static parseFrom(context: SvgPathParseContext): QuadraticSmoothCurveRelativeCommand {
         context.readChatAssert("t");
